@@ -1,0 +1,25 @@
+{
+  "name": "project-v",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Project V — planning and orchestration backend",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "db:migrate": "node --import tsx/esm scripts/db-migrate.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fastify/sensible": "^5.6.0",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.27.0",
+    "postgres": "^3.4.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0"
+  }
+}
