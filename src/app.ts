@@ -14,6 +14,7 @@ import Fastify from 'fastify';
 import sensible from '@fastify/sensible';
 import { healthRoutes } from './routes/health.js';
 import { projectRoutes } from './routes/projects.js';
+import { objectiveRoutes } from './routes/objectives.js';
 
 export async function buildApp() {
   const app = Fastify({
@@ -28,6 +29,7 @@ export async function buildApp() {
   // -- Routes
   await app.register(healthRoutes);
   await app.register(projectRoutes);
+  await app.register(objectiveRoutes);
 
   return app;
 }
